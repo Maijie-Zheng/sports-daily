@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>运动科学·每日内参 - 2026年3月31日</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        body {
+            background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+            min-height: 100vh;
+        }
+        .gradient-title {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -12px rgba(99, 102, 241, 0.15);
+        }
+        .fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+            opacity: 0;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .nav-btn {
+            transition: all 0.2s ease;
+        }
+        .nav-btn:active {
+            transform: scale(0.95);
+        }
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="pb-20">
+    <!-- 顶部标题 -->
+    <div class="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100">
+        <div class="max-w-3xl mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-2xl font-bold gradient-title">🏀 运动科学·每日内参</h1>
+                    <p class="text-sm text-gray-500 mt-1">2026年3月31日 · 星期二</p>
+                </div>
+                <div class="text-right">
+                    <span class="text-xs text-gray-400">每日 8:00 自动推送</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 分类导航 -->
+    <div class="max-w-3xl mx-auto px-4 py-4">
+        <div class="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
+            <a href="#performance" class="nav-btn flex-shrink-0 px-4 py-2 bg-gradient-to-r from-orange-50 to-orange-100 border border-orange-200 rounded-full text-orange-700 text-sm font-medium hover:shadow-md">
+                📈 运动表现
+            </a>
+            <a href="#biomechanics" class="nav-btn flex-shrink-0 px-4 py-2 bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 rounded-full text-blue-700 text-sm font-medium hover:shadow-md">
+                🧬 生物力学
+            </a>
+            <a href="#nutrition" class="nav-btn flex-shrink-0 px-4 py-2 bg-gradient-to-r from-green-50 to-green-100 border border-green-200 rounded-full text-green-700 text-sm font-medium hover:shadow-md">
+                🥗 营养科学
+            </a>
+            <a href="#recovery" class="nav-btn flex-shrink-0 px-4 py-2 bg-gradient-to-r from-purple-50 to-purple-100 border border-purple-200 rounded-full text-purple-700 text-sm font-medium hover:shadow-md">
+                💪 运动康复
+            </a>
+            <a href="#business" class="nav-btn flex-shrink-0 px-4 py-2 bg-gradient-to-r from-yellow-50 to-yellow-100 border border-yellow-200 rounded-full text-yellow-700 text-sm font-medium hover:shadow-md">
+                📊 体育商业
+            </a>
+            <a href="#wearable" class="nav-btn flex-shrink-0 px-4 py-2 bg-gradient-to-r from-pink-50 to-pink-100 border border-pink-200 rounded-full text-pink-700 text-sm font-medium hover:shadow-md">
+                ⚡ 智能装备
+            </a>
+        </div>
+    </div>
+
+    <div class="max-w-3xl mx-auto px-4 space-y-6">
+        
+        <!-- 运动表现 -->
+        <section id="performance" class="fade-in" style="animation-delay: 0.1s;">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="text-xl">📈</span>
+                <h2 class="text-lg font-bold text-gray-800">运动表现</h2>
+                <span class="text-xs bg-orange-100 text-orange-700 px-2 py-1 rounded-full">Performance</span>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- 卡片1 -->
+                <article class="card-hover bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+                    <div class="flex items-start justify-between gap-3 mb-3">
+                        <h3 class="font-semibold text-gray-900 leading-snug flex-1">
+                            Predictive Athlete Performance Modeling with Machine Learning
+                        </h3>
+                        <span class="tag bg-orange-50 text-orange-600">🤖 AI</span>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                        机器学习模型可根据运动员发展档案定制优化策略，不同阶段运动员需要差异化的训练方案。
+                    </p>
+                    <a href="https://www.nature.com/articles/s41598-025-01438-9" target="_blank" class="inline-flex items-center gap-1 text-sm text-orange-600 hover:text-orange-700 font-medium">
+                        阅读原文 <span class="text-lg">→</span>
+                    </a>
+                </article>
+
+                <!-- 卡片2 -->
+                <article class="card-hover bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+                    <div class="flex items-start justify-between gap-3 mb-3">
+                        <h3 class="font-semibold text-gray-900 leading-snug flex-1">
+                            AI-Powered Sports Analytics: Enhancing Performance
+                        </h3>
+                        <span class="tag bg-orange-50 text-orange-600">📊 数据</span>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                        AI驱动的体育分析革命性地提升运动员表现评估与训练决策质量。
+                    </p>
+                    <a href="https://ieeexplore.ieee.org/document/11032536" target="_blank" class="inline-flex items-center gap-1 text-sm text-orange-600 hover:text-orange-700 font-medium">
+                        阅读原文 <span class="text-lg">→</span>
+                    </a>
+                </article>
+
+                <!-- 卡片3 -->
+                <article class="card-hover bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+                    <div class="flex items-start justify-between gap-3 mb-3">
+                        <h3 class="font-semibold text-gray-900 leading-snug flex-1">
+                            Machine Learning Framework for Predicting Athletic Injuries
+                        </h3>
+                        <span class="tag bg-red-50 text-red-600">🛡️ 伤病预防</span>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                        可解释机器学习模型可评估大学运动员的受伤风险，实现早期预警。
+                    </p>
+                    <a href="https://link.springer.com/article/10.1186/s13102-025-01502-x" target="_blank" class="inline-flex items-center gap-1 text-sm text-orange-600 hover:text-orange-700 font-medium">
+                        阅读原文 <span class="text-lg">→</span>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- 生物力学 -->
+        <section id="biomechanics" class="fade-in" style="animation-delay: 0.2s;">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="text-xl">🧬</span>
+                <h2 class="text-lg font-bold text-gray-800">生物力学</h2>
+                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">Biomechanics</span>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- 卡片1 -->
+                <article class="card-hover bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+                    <div class="flex items-start justify-between gap-3 mb-3">
+                        <h3 class="font-semibold text-gray-900 leading-snug flex-1">
+                            Artificial Intelligence in Sports Biomechanics
+                        </h3>
+                        <span class="tag bg-blue-50 text-blue-600">🔬 研究</span>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                        AI在运动生物力学中的前沿应用：增强表现与预防损伤的系统性综述。
+                    </p>
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/40868401/" target="_blank" class="inline-flex items-center gap-1 text-sm text-blue-600 hover:text-blue-700 font-medium">
+                        阅读原文 <span class="text-lg">→</span>
+                    </a>
+                </article>
+
+                <!-- 卡片2 -->
+                <article class="card-hover bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+                    <div class="flex items-start justify-between gap-3 mb-3">
+                        <h3 class="font-semibold text-gray-900 leading-snug flex-1">
+                            Biomechanical Analysis in Sports Injury Prevention
+                        </h3>
+                        <span class="tag bg-green-50 text-green-600">🏃 优化</span>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                        姿势调整、个性化训练与先进康复设备的生物力学策略综合应用。
+                    </p>
+                    <a href="https://www.clausiuspress.com/article/15518.html" target="_blank" class="inline-flex items-center gap-1 text-sm text-blue-600 hover:text-blue-700 font-medium">
+                        阅读原文 <span class="text-lg">→</span>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- 营养科学 -->
+        <section id="nutrition" class="fade-in" style="animation-delay: 0.3s;">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="text-xl">🥗</span>
+                <h2 class="text-lg font-bold text-gray-800">营养科学</h2>
+                <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Nutrition</span>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- 卡片1 -->
+                <article class="card-hover bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+                    <div class="flex items-start justify-between gap-3 mb-3">
+                        <h3 class="font-semibold text-gray-900 leading-snug flex-1">
+                            Food and Nutrition for Athletics: Redefining the Role
+                        </h3>
+                        <span class="tag bg-green-50 text-green-600">💊 补剂</span>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                        重新定义营养在运动员健康与表现中的角色，从传统补充迈向分子机制驱动。
+                    </p>
+                    <a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2025.1602040/full" target="_blank" class="inline-flex items-center gap-1 text-sm text-green-600 hover:text-green-700 font-medium">
+                        阅读原文 <span class="text-lg">→</span>
+                    </a>
+                </article>
+
+                <!-- 卡片2 -->
+                <article class="card-hover bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+                    <div class="flex items-start justify-between gap-3 mb-3">
+                        <h3 class="font-semibold text-gray-900 leading-snug flex-1">
+                            Vitamin Supplementation in Sports: Evidence-Based Review
+                        </h3>
+                        <span class="tag bg-yellow-50 text-yellow-600">🔍 循证</span>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                        十年证据回顾：维生素补剂对运动员氧化应激和表现的影响。
+                    </p>
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/41599826/" target="_blank" class="inline-flex items-center gap-1 text-sm text-green-600 hover:text-green-700 font-medium">
+                        阅读原文 <span class="text-lg">→</span>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- 运动康复 -->
+        <section id="recovery" class="fade-in" style="animation-delay: 0.4s;">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="text-xl">💪</span>
+                <h2 class="text-lg font-bold text-gray-800">运动康复</h2>
+                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Recovery</span>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- 卡片1 -->
+                <article class="card-hover bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+                    <div class="flex items-start justify-between gap-3 mb-3">
+                        <h3 class="font-semibold text-gray-900 leading-snug flex-1">
+                            Sports Injury Rehabilitation: Emerging Approaches
+                        </h3>
+                        <span class="tag bg-purple-50 text-purple-600">🧠 BPS</span>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                        生物-心理-社会(BPS)方法与新兴技术融合的康复前沿进展。
+                    </p>
+                    <a href="https://www.mdpi.com/2076-3417/15/17/9788" target="_blank" class="inline-flex items-center gap-1 text-sm text-purple-600 hover:text-purple-700 font-medium">
+                        阅读原文 <span class="text-lg">→</span>
+                    </a>
+                </article>
+
+                <!-- 卡片2 -->
+                <article class="card-hover bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+                    <div class="flex items-start justify-between gap-3 mb-3">
+                        <h3 class="font-semibold text-gray-900 leading-snug flex-1">
+                            Whole-Body Cryotherapy Reduces Inflammatory Response
+                        </h3>
+                        <span class="tag bg-cyan-50 text-cyan-600">❄️ 冷冻</span>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                        全身冷冻疗法可减少炎症反应，提升身体再生能力。
+                    </p>
+                    <a href="https://www.nature.com/articles/s41598-025-90396-3" target="_blank" class="inline-flex items-center gap-1 text-sm text-purple-600 hover:text-purple-700 font-medium">
+                        阅读原文 <span class="text-lg">→</span>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- 体育商业 -->
+        <section id="business" class="fade-in" style="animation-delay: 0.5s;">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="text-xl">📊</span>
+                <h2 class="text-lg font-bold text-gray-800">体育商业</h2>
+                <span class="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full">Business</span>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- 卡片1 -->
+                <article class="card-hover bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+                    <div class="flex items-start justify-between gap-3 mb-3">
+                        <h3 class="font-semibold text-gray-900 leading-snug flex-1">
+                            Sports Analytics Market $320.4M in 2025
+                        </h3>
+                        <span class="tag bg-yellow-50 text-yellow-600">💰 市场</span>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                        2025年体育分析市场达3.204亿美元，21.5%复合增长率强劲增长。
+                    </p>
+                    <a href="https://www.datainsightsmarket.com/reports/sports-analytics-1456270" target="_blank" class="inline-flex items-center gap-1 text-sm text-yellow-600 hover:text-yellow-700 font-medium">
+                        阅读原文 <span class="text-lg">→</span>
+                    </a>
+                </article>
+
+                <!-- 卡片2 -->
+                <article class="card-hover bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+                    <div class="flex items-start justify-between gap-3 mb-3">
+                        <h3 class="font-semibold text-gray-900 leading-snug flex-1">
+                            Drake Star Sports Tech Report 2025
+                        </h3>
+                        <span class="tag bg-red-50 text-red-600">📈 投资</span>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                        2025年体育科技创历史新高，宣布交易价值达1998亿美元，近千笔交易。
+                    </p>
+                    <a href="https://www.drakestar.com/hubfs/Research/SPORTS%20TECH/Drake%20Star%20Global%20Sports%20Tech%20Report%202025.pdf" target="_blank" class="inline-flex items-center gap-1 text-sm text-yellow-600 hover:text-yellow-700 font-medium">
+                        阅读原文 <span class="text-lg">→</span>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- 智能装备 -->
+        <section id="wearable" class="fade-in" style="animation-delay: 0.6s;">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="text-xl">⚡</span>
+                <h2 class="text-lg font-bold text-gray-800">智能装备</h2>
+                <span class="text-xs bg-pink-100 text-pink-700 px-2 py-1 rounded-full">Wearable</span>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- 卡片1 -->
+                <article class="card-hover bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+                    <div class="flex items-start justify-between gap-3 mb-3">
+                        <h3 class="font-semibold text-gray-900 leading-snug flex-1">
+                            IoT-enabled Deep Learning Monitoring System
+                        </h3>
+                        <span class="tag bg-pink-50 text-pink-600">📡 IoT</span>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                        物联网深度学习监测系统实现实时运动员表现指标与反馈。
+                    </p>
+                    <a href="https://www.nature.com/articles/s41598-025-13949-6" target="_blank" class="inline-flex items-center gap-1 text-sm text-pink-600 hover:text-pink-700 font-medium">
+                        阅读原文 <span class="text-lg">→</span>
+                    </a>
+                </article>
+
+                <!-- 卡片2 -->
+                <article class="card-hover bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+                    <div class="flex items-start justify-between gap-3 mb-3">
+                        <h3 class="font-semibold text-gray-900 leading-snug flex-1">
+                            CES 2026: AI Sports Health Hardware Explosion
+                        </h3>
+                        <span class="tag bg-indigo-50 text-indigo-600">🏭 硬件</span>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                        CES 2026趋势：AI运动健康硬件爆发，具身智能私教时代来临，万亿赛道质变。
+                    </p>
+                    <a href="https://aiflashdesk.com/ai-innovation/ces-2026-ai-sports-hardware" target="_blank" class="inline-flex items-center gap-1 text-sm text-pink-600 hover:text-pink-700 font-medium">
+                        阅读原文 <span class="text-lg">→</span>
+                    </a>
+                </article>
+
+                <!-- 卡片3 -->
+                <article class="card-hover bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+                    <div class="flex items-start justify-between gap-3 mb-3">
+                        <h3 class="font-semibold text-gray-900 leading-snug flex-1">
+                            AI & IoT Transforming Athlete Health Monitoring
+                        </h3>
+                        <span class="tag bg-blue-50 text-blue-600">🤖 AIoT</span>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                        AI与物联网正在转变运动员健康监测方式，实现智能预警。
+                    </p>
+                    <a href="https://iottive.com/2025/10/08/how-ai-iot-are-transforming-athlete-health-monitoring/" target="_blank" class="inline-flex items-center gap-1 text-sm text-pink-600 hover:text-pink-700 font-medium">
+                        阅读原文 <span class="text-lg">→</span>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- 今日建议 -->
+        <section class="fade-in" style="animation-delay: 0.7s;">
+            <div class="bg-gradient-to-r from-violet-50 to-purple-50 rounded-2xl p-6 border border-violet-100">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="text-xl">💡</span>
+                    <h3 class="font-bold text-violet-800">今日建议</h3>
+                </div>
+                <p class="text-sm text-violet-700 leading-relaxed">
+                    2025年体育科技投资创历史新高（近2000亿美元），AI驱动的运动员监测系统正在成为标配。建议关注IoT深度学习监测技术在大学体育中的应用进展，这是未来职业体育数据化的重要风向标。
+                </p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- 底部 -->
+    <footer class="max-w-3xl mx-auto px-4 py-8 mt-8">
+        <div class="text-center text-xs text-gray-400">
+            <p>每日 8:00 自动推送 · 数据来源：arXiv / Nature / 官方博客</p>
+            <p class="mt-2">🏀 运动科学每日内参</p>
+        </div>
+    </footer>
+
+</body>
+</html>
