@@ -1,485 +1,430 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>运动科学每日内参 · 2026年4月6日</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>运动科学每日内参 · 2026-04-07</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', sans-serif; }
     .card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; }
-    .card-hover:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,0.10); }
-    .tag-pill { display: inline-flex; align-items: center; gap: 4px; }
-    .gradient-header { background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 50%, #0ea5e9 100%); }
-    .section-icon { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: 10px; }
-    .finding-dot { width: 6px; height: 6px; border-radius: 50%; background: #3b82f6; flex-shrink: 0; margin-top: 7px; }
-    .nav-btn { transition: all 0.15s ease; }
-    .nav-btn:hover { transform: scale(1.05); }
-    a { text-decoration: none; }
-    .source-link { color: #2563eb; font-size: 0.75rem; }
-    .source-link:hover { color: #1d4ed8; text-decoration: underline; }
+    .card-hover:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.10); }
+    .tag-pill { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.04em; }
+    .section-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex-shrink: 0; margin-top: 5px; }
+    .nav-btn { transition: background 0.15s, color 0.15s; }
+    .nav-btn:hover { filter: brightness(0.92); }
+    .source-link { word-break: break-all; }
   </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
 
   <!-- Header -->
-  <header class="gradient-header text-white">
-    <div class="max-w-2xl mx-auto px-4 py-8">
-      <div class="flex items-center gap-2 mb-2">
-        <span class="text-xs font-semibold tracking-widest uppercase opacity-80 bg-white/10 px-3 py-1 rounded-full">Daily Brief</span>
+  <header class="bg-white border-b border-gray-100 sticky top-0 z-10 shadow-sm">
+    <div class="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="text-xl">🏅</span>
+          <span class="font-bold text-gray-800 text-lg">运动科学每日内参</span>
+        </div>
+        <p class="text-xs text-gray-400 mt-0.5 pl-8">2026年4月7日 · 星期二 · AI精选</p>
       </div>
-      <h1 class="text-2xl font-bold leading-tight mb-1">运动科学每日内参</h1>
-      <p class="text-blue-100 text-sm">2026年4月6日（周一）· 精选前沿资讯，助力科学训练</p>
-      <div class="mt-4 flex items-center gap-2 text-xs opacity-75">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-        <span>涵盖运动表现 · 生物力学 · 营养 · 康复 · 商业 · 穿戴科技</span>
+      <div class="text-right">
+        <span class="text-xs bg-emerald-50 text-emerald-600 px-2.5 py-1 rounded-full font-medium">今日更新</span>
       </div>
     </div>
   </header>
 
   <!-- Quick Nav -->
-  <div class="bg-white border-b border-gray-100 sticky top-0 z-10 shadow-sm">
-    <div class="max-w-2xl mx-auto px-4 py-2.5 flex gap-2 overflow-x-auto scrollbar-none">
-      <a href="#performance" class="nav-btn flex-shrink-0 bg-blue-50 text-blue-700 text-xs font-medium px-3 py-1.5 rounded-full border border-blue-100">🏃 运动表现</a>
-      <a href="#biomechanics" class="nav-btn flex-shrink-0 bg-purple-50 text-purple-700 text-xs font-medium px-3 py-1.5 rounded-full border border-purple-100">⚙️ 生物力学</a>
-      <a href="#nutrition" class="nav-btn flex-shrink-0 bg-green-50 text-green-700 text-xs font-medium px-3 py-1.5 rounded-full border border-green-100">🥗 运动营养</a>
-      <a href="#rehabilitation" class="nav-btn flex-shrink-0 bg-orange-50 text-orange-700 text-xs font-medium px-3 py-1.5 rounded-full border border-orange-100">🩺 运动康复</a>
-      <a href="#business" class="nav-btn flex-shrink-0 bg-yellow-50 text-yellow-700 text-xs font-medium px-3 py-1.5 rounded-full border border-yellow-100">💼 体育商业</a>
-      <a href="#wearable" class="nav-btn flex-shrink-0 bg-teal-50 text-teal-700 text-xs font-medium px-3 py-1.5 rounded-full border border-teal-100">⌚ 智能穿戴</a>
+  <div class="max-w-2xl mx-auto px-4 py-3">
+    <div class="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
+      <a href="#performance" class="nav-btn flex-shrink-0 bg-blue-500 text-white text-xs px-3 py-1.5 rounded-full font-medium">⚡ 运动表现</a>
+      <a href="#biomechanics" class="nav-btn flex-shrink-0 bg-purple-500 text-white text-xs px-3 py-1.5 rounded-full font-medium">🦴 生物力学</a>
+      <a href="#nutrition" class="nav-btn flex-shrink-0 bg-orange-500 text-white text-xs px-3 py-1.5 rounded-full font-medium">🥗 运动营养</a>
+      <a href="#rehab" class="nav-btn flex-shrink-0 bg-rose-500 text-white text-xs px-3 py-1.5 rounded-full font-medium">💊 运动康复</a>
+      <a href="#business" class="nav-btn flex-shrink-0 bg-emerald-500 text-white text-xs px-3 py-1.5 rounded-full font-medium">📈 体育商业</a>
+      <a href="#wearable" class="nav-btn flex-shrink-0 bg-sky-500 text-white text-xs px-3 py-1.5 rounded-full font-medium">⌚ 智能穿戴</a>
     </div>
   </div>
 
-  <!-- Main Content -->
-  <main class="max-w-2xl mx-auto px-4 py-6 space-y-8">
+  <main class="max-w-2xl mx-auto px-4 pb-12 space-y-8">
 
-    <!-- 1. 运动表现 -->
+    <!-- ① 运动表现 -->
     <section id="performance">
-      <div class="flex items-center gap-3 mb-4">
-        <div class="section-icon bg-blue-100">
-          <span class="text-lg">🏃</span>
-        </div>
-        <div>
-          <h2 class="text-base font-bold text-gray-800">运动表现</h2>
-          <p class="text-xs text-gray-400">Athletic Performance</p>
-        </div>
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-lg">⚡</span>
+        <h2 class="text-base font-bold text-gray-800">运动表现</h2>
+        <span class="tag-pill bg-blue-100 text-blue-600">Athletic Performance</span>
       </div>
-
       <div class="space-y-3">
 
         <!-- Card 1 -->
-        <div class="card-hover bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-          <div class="flex items-start justify-between gap-2 mb-2">
-            <span class="tag-pill bg-blue-50 text-blue-600 text-xs font-semibold px-2.5 py-1 rounded-full">精英运动 · 最新研究</span>
-            <span class="text-xs text-gray-400 flex-shrink-0">2026.02</span>
-          </div>
-          <h3 class="font-semibold text-gray-800 text-sm leading-snug mb-2">脑耐力训练（BET）：精英运动员的认知抗疲劳新策略</h3>
-          <div class="space-y-1.5 mb-3">
-            <div class="flex gap-2">
-              <div class="finding-dot"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">研究证实BET（脑耐力训练）能有效增强运动员对心理疲劳的抵抗力，减轻因大脑疲劳导致的竞技表现下滑，尤其对0-3级（准精英至职业级）运动员效果显著。</p>
+        <div class="card-hover bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+          <div class="flex items-start gap-2">
+            <span class="section-dot bg-blue-400 mt-1"></span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-gray-800 text-sm leading-snug">脑耐力训练（BET）：突破精英运动员的认知疲劳上限</h3>
+              <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">
+                最新系统综述（<em>Scandinavian J. Med. & Sci. in Sports</em>，2026）确认，将体能训练与高认知负荷任务同步进行的"脑耐力训练"，能显著提高运动员对心理疲劳的抵抗力，减少比赛后程因认知疲劳引发的表现下滑。研究建议将 BET 纳入精英运动员的标准化周期训练体系，并呼吁开展更大规模的生态效度研究。
+              </p>
+              <div class="mt-2 flex flex-wrap gap-2 items-center">
+                <span class="tag-pill bg-blue-50 text-blue-500">认知科学</span>
+                <span class="tag-pill bg-gray-100 text-gray-500">PubMed 2026</span>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/41674261/" target="_blank" class="text-blue-500 text-xs underline source-link ml-auto">查看来源 →</a>
+              </div>
             </div>
-            <div class="flex gap-2">
-              <div class="finding-dot"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">6周专项BET干预的定向越野精英运动员，认知与体能双项表现均有提升；但目前缺乏针对顶级精英运动员的生态效度研究，实际赛场效益有待评估。</p>
-            </div>
           </div>
-          <a href="https://pubmed.ncbi.nlm.nih.gov/41674261/" target="_blank" class="source-link">📖 查看研究原文 → PLOS/PubMed</a>
         </div>
 
         <!-- Card 2 -->
-        <div class="card-hover bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-          <div class="flex items-start justify-between gap-2 mb-2">
-            <span class="tag-pill bg-blue-50 text-blue-600 text-xs font-semibold px-2.5 py-1 rounded-full">训练方法 · 实证研究</span>
-            <span class="text-xs text-gray-400 flex-shrink-0">2026.04</span>
-          </div>
-          <h3 class="font-semibold text-gray-800 text-sm leading-snug mb-2">埃塞俄比亚精英长跑运动员多模态训练效果研究</h3>
-          <div class="space-y-1.5 mb-3">
-            <div class="flex gap-2">
-              <div class="finding-dot"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">对埃塞俄比亚精英男子长跑运动员的系统研究（Springer, 2026年4月4日）揭示：不同训练模式对运动员生理指标、血液学参数和竞技成绩产生差异化影响。</p>
+        <div class="card-hover bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+          <div class="flex items-start gap-2">
+            <span class="section-dot bg-blue-400 mt-1"></span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-gray-800 text-sm leading-snug">基因组标记驱动"精准运动科学"：127名精英运动员多年跟踪研究</h3>
+              <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">
+                跨越多年的国家级运动科学研究项目（<em>American Impact Review</em>，2026.02）覆盖古典摔跤、皮划艇、赛艇、举重共127名精英运动员，通过多基因评分（PGS）筛选与训练负荷响应相关的遗传标记，实现运动员天赋识别与训练方案个性化定制，将"精准医学"理念移植至竞技体育领域。
+              </p>
+              <div class="mt-2 flex flex-wrap gap-2 items-center">
+                <span class="tag-pill bg-blue-50 text-blue-500">基因组学</span>
+                <span class="tag-pill bg-gray-100 text-gray-500">2026.02</span>
+                <a href="https://americanimpactreview.com/article/e2026005" target="_blank" class="text-blue-500 text-xs underline source-link ml-auto">查看来源 →</a>
+              </div>
             </div>
-            <div class="flex gap-2">
-              <div class="finding-dot"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">研究强调多模态训练组合对提升耐力表现的协同效应，为高原训练优化提供了新的科学依据，该研究为开放获取论文。</p>
-            </div>
           </div>
-          <a href="https://link.springer.com/article/10.1186/s13104-026-07798-3" target="_blank" class="source-link">📖 查看研究原文 → Springer Open Access</a>
         </div>
 
         <!-- Card 3 -->
-        <div class="card-hover bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-          <div class="flex items-start justify-between gap-2 mb-2">
-            <span class="tag-pill bg-blue-50 text-blue-600 text-xs font-semibold px-2.5 py-1 rounded-full">AI预测 · 机器学习</span>
-            <span class="text-xs text-gray-400 flex-shrink-0">2025.05</span>
-          </div>
-          <h3 class="font-semibold text-gray-800 text-sm leading-snug mb-2">机器学习驱动的运动员表现预测整合框架</h3>
-          <div class="space-y-1.5 mb-3">
-            <div class="flex gap-2">
-              <div class="finding-dot"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">《自然》旗下Scientific Reports发布新框架，整合生理、生物力学、心理多维数据，利用机器学习构建更精准的运动员表现预测模型，预测精度优于传统单一指标模型。</p>
+        <div class="card-hover bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+          <div class="flex items-start gap-2">
+            <span class="section-dot bg-blue-400 mt-1"></span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-gray-800 text-sm leading-snug">认知神经科学量化精英表现：脑功能训练进入竞技主流</h3>
+              <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">
+                《Frontiers》2026专题系列研究聚焦认知神经科学在精英运动中的应用，涵盖注意力控制、决策速度、执行功能等维度的量化评估与干预，揭示大脑处理过程对高水平竞技表现的决定性影响，为训练设计提供神经科学依据。
+              </p>
+              <div class="mt-2 flex flex-wrap gap-2 items-center">
+                <span class="tag-pill bg-blue-50 text-blue-500">神经科学</span>
+                <span class="tag-pill bg-gray-100 text-gray-500">Frontiers 2026</span>
+                <a href="https://www.frontiersin.org/research-topics/70874/quantifying-and-optimizing-elite-performance-through-cognitive-neuroscience/articles" target="_blank" class="text-blue-500 text-xs underline source-link ml-auto">查看来源 →</a>
+              </div>
             </div>
-            <div class="flex gap-2">
-              <div class="finding-dot"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">该框架提供了运动员状态早期预警机制，可辅助教练组在赛季中进行数据驱动的训练负荷调整决策。</p>
-            </div>
           </div>
-          <a href="https://www.nature.com/articles/s41598-025-01438-9" target="_blank" class="source-link">📖 查看研究原文 → Nature Scientific Reports</a>
         </div>
 
       </div>
     </section>
 
-    <hr class="border-gray-100">
-
-    <!-- 2. 生物力学 -->
+    <!-- ② 生物力学 -->
     <section id="biomechanics">
-      <div class="flex items-center gap-3 mb-4">
-        <div class="section-icon bg-purple-100">
-          <span class="text-lg">⚙️</span>
-        </div>
-        <div>
-          <h2 class="text-base font-bold text-gray-800">生物力学</h2>
-          <p class="text-xs text-gray-400">Biomechanics & Motion Analysis</p>
-        </div>
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-lg">🦴</span>
+        <h2 class="text-base font-bold text-gray-800">生物力学</h2>
+        <span class="tag-pill bg-purple-100 text-purple-600">Biomechanics</span>
       </div>
-
       <div class="space-y-3">
 
-        <!-- Card 1 -->
-        <div class="card-hover bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-          <div class="flex items-start justify-between gap-2 mb-2">
-            <span class="tag-pill bg-purple-50 text-purple-600 text-xs font-semibold px-2.5 py-1 rounded-full">脑刺激 · 神经科学</span>
-            <span class="text-xs text-gray-400 flex-shrink-0">2026.04</span>
-          </div>
-          <h3 class="font-semibold text-gray-800 text-sm leading-snug mb-2">阳极经颅直流电刺激（tDCS）增强运动表现的神经生物力学研究</h3>
-          <div class="space-y-1.5 mb-3">
-            <div class="flex gap-2">
-              <div class="finding-dot" style="background:#8b5cf6;"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">《行为脑研究》最新发表（2026年4月3日）：阳极tDCS作为非侵入式脑刺激技术，显示出提升运动神经控制效率的潜力，尤其在精细运动表现优化方面具有应用前景。</p>
-            </div>
-            <div class="flex gap-2">
-              <div class="finding-dot" style="background:#8b5cf6;"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">研究揭示运动皮层激活模式与动作精度之间的直接关联，为神经生物力学训练手段的开发提供理论支持，但个体差异仍是主要挑战。</p>
+        <div class="card-hover bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+          <div class="flex items-start gap-2">
+            <span class="section-dot bg-purple-400 mt-1"></span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-gray-800 text-sm leading-snug">可穿戴实时生物力学框架：对标实验室级别的运动损伤预测</h3>
+              <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">
+                《Scientific Reports》2026.01 发布一套集成可穿戴传感器与预测建模的实时生物力学框架，通过与 OptiTrack Prime 13 实验室黄金标准对比验证，在关节角度、地面反应力估算等核心指标上达到高度吻合，实现了真实运动场景下的损伤风险早期预警，填补了实验室与现场应用之间的关键空白。
+              </p>
+              <div class="mt-2 flex flex-wrap gap-2 items-center">
+                <span class="tag-pill bg-purple-50 text-purple-500">损伤预测</span>
+                <span class="tag-pill bg-gray-100 text-gray-500">Nature 2026.01</span>
+                <a href="https://www.nature.com/articles/s41598-025-34551-w" target="_blank" class="text-purple-500 text-xs underline source-link ml-auto">查看来源 →</a>
+              </div>
             </div>
           </div>
-          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0166432826001695" target="_blank" class="source-link">📖 查看研究原文 → ScienceDirect / Behavioural Brain Research</a>
         </div>
 
-        <!-- Card 2 -->
-        <div class="card-hover bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-          <div class="flex items-start justify-between gap-2 mb-2">
-            <span class="tag-pill bg-purple-50 text-purple-600 text-xs font-semibold px-2.5 py-1 rounded-full">3D动作分析 · 实验室技术</span>
-            <span class="text-xs text-gray-400 flex-shrink-0">持续更新</span>
-          </div>
-          <h3 class="font-semibold text-gray-800 text-sm leading-snug mb-2">多相机实时3D动作捕捉：从实验室走向运动现场</h3>
-          <div class="space-y-1.5 mb-3">
-            <div class="flex gap-2">
-              <div class="finding-dot" style="background:#8b5cf6;"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">英国UCLan运动生物力学实验室配备永久固定红外相机阵列+浮动相机系统，结合Kistler测力台、多通道EMG和足底压力垫，支持实时动捕与复杂3D分析同步进行。</p>
-            </div>
-            <div class="flex gap-2">
-              <div class="finding-dot" style="background:#8b5cf6;"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">该技术路径正推动运动损伤机制研究走向更高精度：伤前生物力学模式的早期识别有望在赛季前筛查中实现标准化应用。</p>
+        <div class="card-hover bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+          <div class="flex items-start gap-2">
+            <span class="section-dot bg-purple-400 mt-1"></span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-gray-800 text-sm leading-snug">Noraxon MR4 Spring 2026：动作捕捉集成与多应用分析工具重磅更新</h3>
+              <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">
+                运动生物力学软件标杆 Noraxon 发布2026春季版本，新增多款运动专项分析模块、扩展与第三方动作捕捉系统的集成接口，并优化跨学科工作流程。此次更新进一步降低了实验室到现场转化门槛，为高校科研与职业球队运动表现分析提供统一平台。
+              </p>
+              <div class="mt-2 flex flex-wrap gap-2 items-center">
+                <span class="tag-pill bg-purple-50 text-purple-500">软件更新</span>
+                <span class="tag-pill bg-gray-100 text-gray-500">2026.04</span>
+                <a href="https://www.noraxon.com/mr4-2026-spring" target="_blank" class="text-purple-500 text-xs underline source-link ml-auto">查看来源 →</a>
+              </div>
             </div>
           </div>
-          <a href="https://www.uclan.ac.uk/facilities/sports-biomechanics" target="_blank" class="source-link">📖 了解更多 → UCLan Sports Biomechanics Lab</a>
+        </div>
+
+        <div class="card-hover bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+          <div class="flex items-start gap-2">
+            <span class="section-dot bg-purple-400 mt-1"></span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-gray-800 text-sm leading-snug">AI + 运动捕捉融合：无标记点动作分析进入实用阶段</h3>
+              <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">
+                MDPI《应用科学》专题综述（2026最新动态）系统梳理了运动生物力学领域的前沿方向：AI 驱动的无标记点动作捕捉、可穿戴传感器与计算建模的深度融合，正在以更低成本、更高可及性重塑运动科学分析流程，尤其在基层运动员和大众健身场景中展现出巨大应用潜力。
+              </p>
+              <div class="mt-2 flex flex-wrap gap-2 items-center">
+                <span class="tag-pill bg-purple-50 text-purple-500">无标记点</span>
+                <span class="tag-pill bg-gray-100 text-gray-500">MDPI 2026</span>
+                <a href="https://www.mdpi.com/topics/1M719R7AEH" target="_blank" class="text-purple-500 text-xs underline source-link ml-auto">查看来源 →</a>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
     </section>
 
-    <hr class="border-gray-100">
-
-    <!-- 3. 运动营养 -->
+    <!-- ③ 运动营养 -->
     <section id="nutrition">
-      <div class="flex items-center gap-3 mb-4">
-        <div class="section-icon bg-green-100">
-          <span class="text-lg">🥗</span>
-        </div>
-        <div>
-          <h2 class="text-base font-bold text-gray-800">运动营养</h2>
-          <p class="text-xs text-gray-400">Sports Nutrition</p>
-        </div>
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-lg">🥗</span>
+        <h2 class="text-base font-bold text-gray-800">运动营养</h2>
+        <span class="tag-pill bg-orange-100 text-orange-600">Sports Nutrition</span>
       </div>
-
       <div class="space-y-3">
 
-        <!-- Card 1 -->
-        <div class="card-hover bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-          <div class="flex items-start justify-between gap-2 mb-2">
-            <span class="tag-pill bg-green-50 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">市场趋势 · 2026预测</span>
-            <span class="text-xs text-gray-400 flex-shrink-0">2026.03</span>
-          </div>
-          <h3 class="font-semibold text-gray-800 text-sm leading-snug mb-2">个性化营养崛起：2026年运动营养8大核心趋势</h3>
-          <div class="space-y-1.5 mb-3">
-            <div class="flex gap-2">
-              <div class="finding-dot" style="background:#16a34a;"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">全球运动营养市场预计2026年达630亿美元，CAGR 8.6%。核心增长引擎：功能性饮料（补水饮品、蛋白奶昔）搜索热度持续领跑，预计该细分市场2030年将达2485亿美元。</p>
-            </div>
-            <div class="flex gap-2">
-              <div class="finding-dot" style="background:#16a34a;"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">个性化营养成主流趋势：消费者根据DNA、可穿戴设备数据定制方案；76%美国消费者更信任成分透明品牌；女性健康、荷尔蒙平衡等细分需求快速增长。</p>
+        <div class="card-hover bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+          <div class="flex items-start gap-2">
+            <span class="section-dot bg-orange-400 mt-1"></span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-gray-800 text-sm leading-snug">Nature 万人肠道微生物研究：精准营养模拟已成可能</h3>
+              <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">
+                《Nature Medicine》2026.03 发布迄今最大规模饮食-微生物组关联研究，对超过1万名受试者的数据分析揭示了食物与肠道菌群之间持久、个体化的关联模式，为模拟个人对特定饮食干预的响应提供了数据基础。这一成果将加速运动员精准营养方案的落地，使"什么时候吃什么、吃多少"有据可查。
+              </p>
+              <div class="mt-2 flex flex-wrap gap-2 items-center">
+                <span class="tag-pill bg-orange-50 text-orange-500">精准营养</span>
+                <span class="tag-pill bg-gray-100 text-gray-500">Nature Med. 2026.03</span>
+                <a href="https://www.nature.com/articles/s41591-026-04312-x" target="_blank" class="text-orange-500 text-xs underline source-link ml-auto">查看来源 →</a>
+              </div>
             </div>
           </div>
-          <a href="https://www.accio.com/business/sports-nutrition-trends-2026" target="_blank" class="source-link">📖 查看报告 → Accio Business Insights 2026</a>
         </div>
 
-        <!-- Card 2 -->
-        <div class="card-hover bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-          <div class="flex items-start justify-between gap-2 mb-2">
-            <span class="tag-pill bg-green-50 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">补剂研究 · 市场分析</span>
-            <span class="text-xs text-gray-400 flex-shrink-0">2026.02</span>
-          </div>
-          <h3 class="font-semibold text-gray-800 text-sm leading-snug mb-2">运动营养补剂市场：预计2033年突破1384亿美元</h3>
-          <div class="space-y-1.5 mb-3">
-            <div class="flex gap-2">
-              <div class="finding-dot" style="background:#16a34a;"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">植物基蛋白、混合配方（肠道健康+恢复）和清洁标签产品成为竞争差异化核心。Glanbia、Abbott、PepsiCo等主要玩家加速布局个性化营养生态体系。</p>
-            </div>
-            <div class="flex gap-2">
-              <div class="finding-dot" style="background:#16a34a;"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">预计监管趋严：消费者要求科学依据更扎实、原料溯源更透明，品牌需在营销中强调临床证据以建立信任度，纯营销话术时代逐渐终结。</p>
+        <div class="card-hover bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+          <div class="flex items-start gap-2">
+            <span class="section-dot bg-orange-400 mt-1"></span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-gray-800 text-sm leading-snug">2026运动营养六大趋势：功能性饮料、植物蛋白与个性化配方引领市场</h3>
+              <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">
+                Accio 市场研究（2026.03）梳理运动营养六大趋势：①功能性饮料整合电解质与认知增强成分；②益生菌+蛋白质复合产品；③AI 驱动个性化营养配方；④植物基蛋白替代升级；⑤近零糖高蛋白 RTD；⑥赛前赛中赛后分阶段补给策略。市场规模预计2026年达527.6亿美元，同比增长10.6%。
+              </p>
+              <div class="mt-2 flex flex-wrap gap-2 items-center">
+                <span class="tag-pill bg-orange-50 text-orange-500">市场趋势</span>
+                <span class="tag-pill bg-gray-100 text-gray-500">2026.03</span>
+                <a href="https://www.accio.com/business/sports-nutrition-trends-2026" target="_blank" class="text-orange-500 text-xs underline source-link ml-auto">查看来源 →</a>
+              </div>
             </div>
           </div>
-          <a href="https://www.datainsightsmarket.com/reports/sports-nutrition-supplements-1243427" target="_blank" class="source-link">📖 查看报告 → Data Insights Market 2026</a>
+        </div>
+
+        <div class="card-hover bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+          <div class="flex items-start gap-2">
+            <span class="section-dot bg-orange-400 mt-1"></span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-gray-800 text-sm leading-snug">深度学习解码肠道菌群：预测个体对营养干预的响应成为现实</h3>
+              <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">
+                《National Science Review》2025.04 研究显示，深度学习模型结合肠道微生物组数据，可高精度预测个体对特定食物和营养干预的生理反应，包括血糖响应、能量代谢效率等。这为运动员量身定制营养计划提供了算法基础，有望替代传统"一刀切"的补剂推荐模式。
+              </p>
+              <div class="mt-2 flex flex-wrap gap-2 items-center">
+                <span class="tag-pill bg-orange-50 text-orange-500">深度学习</span>
+                <span class="tag-pill bg-gray-100 text-gray-500">NSR 2025</span>
+                <a href="https://academic.oup.com/nsr/article/12/6/nwaf148/8114801" target="_blank" class="text-orange-500 text-xs underline source-link ml-auto">查看来源 →</a>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
     </section>
 
-    <hr class="border-gray-100">
-
-    <!-- 4. 运动康复 -->
-    <section id="rehabilitation">
-      <div class="flex items-center gap-3 mb-4">
-        <div class="section-icon bg-orange-100">
-          <span class="text-lg">🩺</span>
-        </div>
-        <div>
-          <h2 class="text-base font-bold text-gray-800">运动康复</h2>
-          <p class="text-xs text-gray-400">Sports Rehabilitation</p>
-        </div>
+    <!-- ④ 运动康复 -->
+    <section id="rehab">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-lg">💊</span>
+        <h2 class="text-base font-bold text-gray-800">运动康复</h2>
+        <span class="tag-pill bg-rose-100 text-rose-600">Sports Rehabilitation</span>
       </div>
-
       <div class="space-y-3">
 
-        <!-- Card 1 -->
-        <div class="card-hover bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-          <div class="flex items-start justify-between gap-2 mb-2">
-            <span class="tag-pill bg-orange-50 text-orange-700 text-xs font-semibold px-2.5 py-1 rounded-full">恢复科学 · 循证方法</span>
-            <span class="text-xs text-gray-400 flex-shrink-0">2026</span>
-          </div>
-          <h3 class="font-semibold text-gray-800 text-sm leading-snug mb-2">2026年五大科学支持的运动恢复方法：神经系统调节成为核心</h3>
-          <div class="space-y-1.5 mb-3">
-            <div class="flex gap-2">
-              <div class="finding-dot" style="background:#ea580c;"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">2026年恢复理念重大转变：恢复=神经系统重置+肌肉修复双轨并行。①睡眠优化（7-9h/夜）仍是最强力恢复工具；②Zone 2低强度有氧（20-40min）优于完全休息；③呼吸训练（5-10min，训练后）可改善心率变异性、降低皮质醇。</p>
-            </div>
-            <div class="flex gap-2">
-              <div class="finding-dot" style="background:#ea580c;"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">冷水浸泡策略性使用：高强度赛后有效，但力量训练后立即冷暴露会抑制肌肉增长适应，不建议常规用于增肌训练周期后。</p>
+        <div class="card-hover bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+          <div class="flex items-start gap-2">
+            <span class="section-dot bg-rose-400 mt-1"></span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-gray-800 text-sm leading-snug">HRV 作为恢复监测黄金指标：PMC 2026 系统研究确认临床价值</h3>
+              <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">
+                PMC 最新综述（2026）全面梳理心率变异性（HRV）在运动员适应监控与恢复状态评估中的应用，确认 HRV 作为自主神经系统功能的非侵入性生物标志物，能有效反映训练适应进程、应激水平和恢复质量，为制订个性化训练-恢复周期提供客观依据，尤其适用于伤后复出阶段的精细化管理。
+              </p>
+              <div class="mt-2 flex flex-wrap gap-2 items-center">
+                <span class="tag-pill bg-rose-50 text-rose-500">HRV监控</span>
+                <span class="tag-pill bg-gray-100 text-gray-500">PMC 2026</span>
+                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12787763/" target="_blank" class="text-rose-500 text-xs underline source-link ml-auto">查看来源 →</a>
+              </div>
             </div>
           </div>
-          <a href="https://evolve-mma.com/blog/the-most-effective-recovery-methods-in-2026-backed-by-sports-science/" target="_blank" class="source-link">📖 查看文章 → Evolve MMA / Sports Science Blog</a>
         </div>
 
-        <!-- Card 2 -->
-        <div class="card-hover bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-          <div class="flex items-start justify-between gap-2 mb-2">
-            <span class="tag-pill bg-orange-50 text-orange-700 text-xs font-semibold px-2.5 py-1 rounded-full">ACL康复 · 伤后重返</span>
-            <span class="text-xs text-gray-400 flex-shrink-0">2026.02</span>
-          </div>
-          <h3 class="font-semibold text-gray-800 text-sm leading-snug mb-2">ACL前交叉韧带损伤康复：创新策略优化重返赛场结果</h3>
-          <div class="space-y-1.5 mb-3">
-            <div class="flex gap-2">
-              <div class="finding-dot" style="background:#ea580c;"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">2026年2月发表的系统综述（Taylor & Francis）指出：传统ACL康复方案存在显著不一致性，导致重返赛场率不稳定、再伤风险偏高；创新策略强调个体化康复路径+功能性结果指标导向。</p>
-            </div>
-            <div class="flex gap-2">
-              <div class="finding-dot" style="background:#ea580c;"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">最新循证干预聚焦：神经肌肉控制训练、双腿功能对称性评估、心理准备状态测量三位一体，而非单纯强调时间节点，重塑了"伤后9个月返场"的传统思维。</p>
+        <div class="card-hover bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+          <div class="flex items-start gap-2">
+            <span class="section-dot bg-rose-400 mt-1"></span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-gray-800 text-sm leading-snug">2026最有效的运动恢复方法：睡眠科学、神经系统调节与数据驱动工具三位一体</h3>
+              <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">
+                Evolve MMA 运动科学团队（2026）指出，现代恢复体系已超越传统休息日概念，三大支柱重塑康复格局：①<strong>睡眠优化</strong>（慢波睡眠与GH分泌调控）；②<strong>神经系统降档</strong>（冷热交替浴、呼吸训练、副交感神经激活）；③<strong>数据驱动恢复</strong>（基于可穿戴实时负荷反馈调整训练强度），使伤后重返赛场周期显著缩短。
+              </p>
+              <div class="mt-2 flex flex-wrap gap-2 items-center">
+                <span class="tag-pill bg-rose-50 text-rose-500">恢复科学</span>
+                <span class="tag-pill bg-gray-100 text-gray-500">2026</span>
+                <a href="https://evolve-mma.com/blog/the-most-effective-recovery-methods-in-2026-backed-by-sports-science/" target="_blank" class="text-rose-500 text-xs underline source-link ml-auto">查看来源 →</a>
+              </div>
             </div>
           </div>
-          <a href="https://www.tandfonline.com/doi/full/10.1080/21679169.2026.2627254" target="_blank" class="source-link">📖 查看研究 → Taylor & Francis / European Journal of Sport Science</a>
         </div>
 
-        <!-- Card 3 -->
-        <div class="card-hover bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-          <div class="flex items-start justify-between gap-2 mb-2">
-            <span class="tag-pill bg-orange-50 text-orange-700 text-xs font-semibold px-2.5 py-1 rounded-full">移动性训练 · 物理治疗</span>
-            <span class="text-xs text-gray-400 flex-shrink-0">2026</span>
-          </div>
-          <h3 class="font-semibold text-gray-800 text-sm leading-snug mb-2">移动性训练进化：负重拉伸+关节末端等长保持替代传统静态拉伸</h3>
-          <div class="space-y-1.5 mb-3">
-            <div class="flex gap-2">
-              <div class="finding-dot" style="background:#ea580c;"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">研究证实：结构化移动性训练（控制性关节旋转、负重拉伸、末端等长保持+肌筋膜放松）相比传统静态拉伸，能更有效改善关节活动度，且不影响力量输出。</p>
-            </div>
-            <div class="flex gap-2">
-              <div class="finding-dot" style="background:#ea580c;"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">建议重点：每次训练后15-30分钟移动性专项训练，优先针对髋部、胸椎、肩部——这是格斗类运动员和久坐人群的共同薄弱链接。</p>
+        <div class="card-hover bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+          <div class="flex items-start gap-2">
+            <span class="section-dot bg-rose-400 mt-1"></span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-gray-800 text-sm leading-snug">生物心理社会（BPS）模型：运动损伤康复范式的全面升级</h3>
+              <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">
+                MDPI《应用科学》叙述性综述系统评价了运动损伤康复的新兴技术，核心结论是：以"生物-心理-社会"三维框架替代传统纯生物医学模型，将心理韧性训练、社会支持系统纳入康复方案，可显著提升伤后运动员的主观恢复感知与客观功能指标，降低再伤风险和恐惧-回避行为。
+              </p>
+              <div class="mt-2 flex flex-wrap gap-2 items-center">
+                <span class="tag-pill bg-rose-50 text-rose-500">BPS模型</span>
+                <span class="tag-pill bg-gray-100 text-gray-500">MDPI 2025</span>
+                <a href="https://www.mdpi.com/2076-3417/15/17/9788" target="_blank" class="text-rose-500 text-xs underline source-link ml-auto">查看来源 →</a>
+              </div>
             </div>
           </div>
-          <a href="https://evolve-mma.com/blog/the-most-effective-recovery-methods-in-2026-backed-by-sports-science/" target="_blank" class="source-link">📖 查看文章 → Evolve MMA / Sports Science Blog</a>
         </div>
 
       </div>
     </section>
 
-    <hr class="border-gray-100">
-
-    <!-- 5. 体育商业 -->
+    <!-- ⑤ 体育商业 -->
     <section id="business">
-      <div class="flex items-center gap-3 mb-4">
-        <div class="section-icon bg-yellow-100">
-          <span class="text-lg">💼</span>
-        </div>
-        <div>
-          <h2 class="text-base font-bold text-gray-800">体育商业</h2>
-          <p class="text-xs text-gray-400">Sports Business</p>
-        </div>
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-lg">📈</span>
+        <h2 class="text-base font-bold text-gray-800">体育商业</h2>
+        <span class="tag-pill bg-emerald-100 text-emerald-600">Sports Business</span>
       </div>
-
       <div class="space-y-3">
 
-        <!-- Card 1 -->
-        <div class="card-hover bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-          <div class="flex items-start justify-between gap-2 mb-2">
-            <span class="tag-pill bg-yellow-50 text-yellow-700 text-xs font-semibold px-2.5 py-1 rounded-full">德勤报告 · 行业展望</span>
-            <span class="text-xs text-gray-400 flex-shrink-0">2026.02</span>
-          </div>
-          <h3 class="font-semibold text-gray-800 text-sm leading-snug mb-2">德勤《2026全球体育行业展望》：AI重塑运营、资本专业化浪潮加速</h3>
-          <div class="space-y-1.5 mb-3">
-            <div class="flex gap-2">
-              <div class="finding-dot" style="background:#d97706;"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">82%的体育组织已成为AI采用者；63%认为需要体育专属垂直技术；71%已与早期初创公司合作。AI代理将在2026年落地应用于票务、内容生成、场馆安全等端到端工作流。</p>
-            </div>
-            <div class="flex gap-2">
-              <div class="finding-dot" style="background:#d97706;"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">私募资本大规模进入体育产业，体育资产从"兴趣投资"升格为"专业资产类别"。多俱乐部跨地区ownership组合（如City Football Group模式）正构建全球娱乐平台，颠覆传统俱乐部运营逻辑。</p>
+        <div class="card-hover bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+          <div class="flex items-start gap-2">
+            <span class="section-dot bg-emerald-400 mt-1"></span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-gray-800 text-sm leading-snug">Deloitte 2026全球体育产业展望：AI重塑运营，场馆进化为全年候平台</h3>
+              <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">
+                德勤2026年报（2026.02）揭示四大结构性变革：①<strong>AI渗透运营全链条</strong>，从票务定价到训练分析实现自动化；②<strong>资本规模化并购</strong>持续推升俱乐部估值；③<strong>体育-媒体-娱乐三界融合</strong>加速；④<strong>场馆全年候运营</strong>成为新盈利模式。建议各利益相关方重新审视战略定位，把握数字化与体验经济双重红利。
+              </p>
+              <div class="mt-2 flex flex-wrap gap-2 items-center">
+                <span class="tag-pill bg-emerald-50 text-emerald-500">Deloitte</span>
+                <span class="tag-pill bg-gray-100 text-gray-500">2026.02</span>
+                <a href="https://www.deloitte.com/us/en/insights/industry/technology/technology-media-telecom-outlooks/sports-industry-outlook.html" target="_blank" class="text-emerald-500 text-xs underline source-link ml-auto">查看来源 →</a>
+              </div>
             </div>
           </div>
-          <a href="https://www.deloitte.com/us/en/insights/industry/technology/technology-media-telecom-outlooks/sports-industry-outlook.html" target="_blank" class="source-link">📖 查看报告 → Deloitte Sports Industry Outlook 2026</a>
         </div>
 
-        <!-- Card 2 -->
-        <div class="card-hover bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-          <div class="flex items-start justify-between gap-2 mb-2">
-            <span class="tag-pill bg-yellow-50 text-yellow-700 text-xs font-semibold px-2.5 py-1 rounded-full">科技投资 · 初创公司</span>
-            <span class="text-xs text-gray-400 flex-shrink-0">2026.03</span>
-          </div>
-          <h3 class="font-semibold text-gray-800 text-sm leading-snug mb-2">SportsPro：2026年20家值得关注的体育科技投资标的</h3>
-          <div class="space-y-1.5 mb-3">
-            <div class="flex gap-2">
-              <div class="finding-dot" style="background:#d97706;"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">重点方向：汗液传感可穿戴设备（Epicore Biosystems）、AI视频自动裁判（Owl AI）、赛车AI教练（Track Titan）、格斗运动AI评分（Jabbr）、多语言实时解说翻译（Lingopal.ai）。</p>
-            </div>
-            <div class="flex gap-2">
-              <div class="finding-dot" style="background:#d97706;"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">体育场馆升级趋势：不再仅是比赛场地，而是融合商业、住宅、零售的"体育街区"，追求非比赛日经济收益，政府要求量化社会效益成为新常态。</p>
+        <div class="card-hover bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+          <div class="flex items-start gap-2">
+            <span class="section-dot bg-emerald-400 mt-1"></span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-gray-800 text-sm leading-snug">SportsPro 2026值得投资的20个体育科技方向：AI分析、球迷互动与健康科技领衔</h3>
+              <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">
+                SportsPro 第七届年度体育科技投资榜单（2026.03）精选20家代表性创业公司，重点方向涵盖：赛事数据实时AI分析、沉浸式球迷互动平台、运动员健康监测与伤病管理、场馆智能化运营以及女子体育专属科技解决方案。榜单彰显了体育科技正从通用工具走向运动专用解决方案的关键演变趋势。
+              </p>
+              <div class="mt-2 flex flex-wrap gap-2 items-center">
+                <span class="tag-pill bg-emerald-50 text-emerald-500">投资榜单</span>
+                <span class="tag-pill bg-gray-100 text-gray-500">SportsPro 2026.03</span>
+                <a href="https://www.sportspro.com/features/technology/sports-technology-investment-ideas-2026-list-startups/" target="_blank" class="text-emerald-500 text-xs underline source-link ml-auto">查看来源 →</a>
+              </div>
             </div>
           </div>
-          <a href="https://www.sportspro.com/features/technology/sports-technology-investment-ideas-2026-list-startups/" target="_blank" class="source-link">📖 查看名单 → SportsPro 2026 Sports Tech Investment List</a>
         </div>
 
-        <!-- Card 3 -->
-        <div class="card-hover bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-          <div class="flex items-start justify-between gap-2 mb-2">
-            <span class="tag-pill bg-yellow-50 text-yellow-700 text-xs font-semibold px-2.5 py-1 rounded-full">全球赛事 · 经济影响</span>
-            <span class="text-xs text-gray-400 flex-shrink-0">2026.01</span>
-          </div>
-          <h3 class="font-semibold text-gray-800 text-sm leading-snug mb-2">2026世界杯叠加多大型赛事：全球体育经济迎来历史性增长窗口</h3>
-          <div class="space-y-1.5 mb-3">
-            <div class="flex gap-2">
-              <div class="finding-dot" style="background:#d97706;"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">2026年密集举办世界杯、奥运会等超级体育赛事，媒体版权价值重塑，全球体育科技加速落地。多国赛事主办地争夺推动基础设施投资和本地体育产业链升级。</p>
-            </div>
-            <div class="flex gap-2">
-              <div class="finding-dot" style="background:#d97706;"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">Sports Business Journal预判：2026年将是体育产业关键拐点年，NIL协议、女子体育投资、大学体育商业化将同步爆发，形成新的价值分配格局。</p>
+        <div class="card-hover bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+          <div class="flex items-start gap-2">
+            <span class="section-dot bg-emerald-400 mt-1"></span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-gray-800 text-sm leading-snug">PwC 北美体育展望2026：会员制票务与运动员经济学重塑商业格局</h3>
+              <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">
+                PwC 2026北美体育年报聚焦三大商业命题：①<strong>会员制动态票务</strong>作为球迷关系管理新范式；②<strong>球员姓名肖像权（NIL）经济</strong>催生运动员个人品牌商业化爆发；③<strong>数字球迷互动</strong>从内容消费转向深度参与和社区共建。AI技术在以上三个维度均充当核心使能器角色。
+              </p>
+              <div class="mt-2 flex flex-wrap gap-2 items-center">
+                <span class="tag-pill bg-emerald-50 text-emerald-500">PwC</span>
+                <span class="tag-pill bg-gray-100 text-gray-500">2026</span>
+                <a href="https://www.pwc.com/us/en/industries/tmt/library/sports-outlook-north-america.html" target="_blank" class="text-emerald-500 text-xs underline source-link ml-auto">查看来源 →</a>
+              </div>
             </div>
           </div>
-          <a href="https://worldbizmagazine.com/sports-business-impact-2026-global-events-economy" target="_blank" class="source-link">📖 查看分析 → World Biz Magazine 2026 Sports Economy</a>
         </div>
 
       </div>
     </section>
 
-    <hr class="border-gray-100">
-
-    <!-- 6. 智能穿戴 -->
+    <!-- ⑥ 智能穿戴 -->
     <section id="wearable">
-      <div class="flex items-center gap-3 mb-4">
-        <div class="section-icon bg-teal-100">
-          <span class="text-lg">⌚</span>
-        </div>
-        <div>
-          <h2 class="text-base font-bold text-gray-800">智能穿戴</h2>
-          <p class="text-xs text-gray-400">Wearable Technology</p>
-        </div>
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-lg">⌚</span>
+        <h2 class="text-base font-bold text-gray-800">智能穿戴</h2>
+        <span class="tag-pill bg-sky-100 text-sky-600">Wearable Technology</span>
       </div>
-
       <div class="space-y-3">
 
-        <!-- Card 1 -->
-        <div class="card-hover bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-          <div class="flex items-start justify-between gap-2 mb-2">
-            <span class="tag-pill bg-teal-50 text-teal-700 text-xs font-semibold px-2.5 py-1 rounded-full">IoT框架 · 安全监测</span>
-            <span class="text-xs text-gray-400 flex-shrink-0">2026.02</span>
-          </div>
-          <h3 class="font-semibold text-gray-800 text-sm leading-snug mb-2">基于CRNN时空分析的IoT运动安全监测框架：精度达95.99%</h3>
-          <div class="space-y-1.5 mb-3">
-            <div class="flex gap-2">
-              <div class="finding-dot" style="background:#0d9488;"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">《自然》旗下Scientific Reports发布（2026年2月28日）：新IoT框架结合CRNN（卷积+LSTM+自注意力）实现运动活动识别准确率95.99%，端侧推理延迟仅47.3ms，能耗增加控制在12.4%以内。</p>
-            </div>
-            <div class="flex gap-2">
-              <div class="finding-dot" style="background:#0d9488;"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">模型压缩突破：通过8-bit量化+知识蒸馏，参数量从2.34M压缩至0.58M，实现在资源受限可穿戴设备上的实时部署；AES-128加密保障运动健康数据安全传输。</p>
+        <div class="card-hover bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+          <div class="flex items-start gap-2">
+            <span class="section-dot bg-sky-400 mt-1"></span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-gray-800 text-sm leading-snug">Nature 2026：IoT可穿戴安全监控框架解决时空关节分析难题</h3>
+              <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">
+                《Scientific Reports》2026.02 提出一套基于可穿戴传感器的 IoT 运动安全监控新框架，重点突破了现有方案在关节时空分析上的精度缺陷，利用多传感器融合与边缘计算实现毫秒级异常动作检测，在实际运动场景中可实时预警潜在受伤风险，对高强度训练和康复阶段尤具价值。
+              </p>
+              <div class="mt-2 flex flex-wrap gap-2 items-center">
+                <span class="tag-pill bg-sky-50 text-sky-500">IoT安全</span>
+                <span class="tag-pill bg-gray-100 text-gray-500">Nature 2026.02</span>
+                <a href="https://www.nature.com/articles/s41598-026-41195-x" target="_blank" class="text-sky-500 text-xs underline source-link ml-auto">查看来源 →</a>
+              </div>
             </div>
           </div>
-          <a href="https://www.nature.com/articles/s41598-026-41195-x" target="_blank" class="source-link">📖 查看研究原文 → Nature Scientific Reports 2026</a>
         </div>
 
-        <!-- Card 2 -->
-        <div class="card-hover bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-          <div class="flex items-start justify-between gap-2 mb-2">
-            <span class="tag-pill bg-teal-50 text-teal-700 text-xs font-semibold px-2.5 py-1 rounded-full">汗液传感 · 生化监测</span>
-            <span class="text-xs text-gray-400 flex-shrink-0">2026.03</span>
-          </div>
-          <h3 class="font-semibold text-gray-800 text-sm leading-snug mb-2">Epicore Biosystems汗液传感可穿戴：实时监测运动员水合与体能消耗</h3>
-          <div class="space-y-1.5 mb-3">
-            <div class="flex gap-2">
-              <div class="finding-dot" style="background:#0d9488;"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">Epicore Biosystems（B轮融资）开发非侵入式汗液传感器贴片，实时采集电解质水平、汗液量和体温数据，直接反映运动员当前生理状态，已与美国反兴奋剂机构（USADA）展开合作。</p>
-            </div>
-            <div class="flex gap-2">
-              <div class="finding-dot" style="background:#0d9488;"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">该技术代表穿戴设备从"运动数据"（心率、步数）向"生化数据"（代谢物、激素）升维的核心趋势，为个性化营养补充和实时体能管理提供客观生理依据。</p>
+        <div class="card-hover bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+          <div class="flex items-start gap-2">
+            <span class="section-dot bg-sky-400 mt-1"></span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-gray-800 text-sm leading-snug">IEEE 2026：IoT + AI 重构运动员实时健康监控，动态赛场环境下精度大幅提升</h3>
+              <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">
+                IEEE Xplore 2025.07 发布的研究构建了面向动态运动场景的 IoT-AI 实时健康监控系统，解决了此前穿戴设备在高强度对抗、快速变向运动中数据失真的痛点。通过边缘 AI 推理与云端大模型协同，实现了心率、氧饱和度、肌肉疲劳指数的高可靠连续采集，为运动员健康决策提供实时支撑。
+              </p>
+              <div class="mt-2 flex flex-wrap gap-2 items-center">
+                <span class="tag-pill bg-sky-50 text-sky-500">实时监控</span>
+                <span class="tag-pill bg-gray-100 text-gray-500">IEEE 2025</span>
+                <a href="https://ieeexplore.ieee.org/document/11075813" target="_blank" class="text-sky-500 text-xs underline source-link ml-auto">查看来源 →</a>
+              </div>
             </div>
           </div>
-          <a href="https://www.sportspro.com/features/technology/sports-technology-investment-ideas-2026-list-startups/" target="_blank" class="source-link">📖 查看详情 → SportsPro Sports Tech Class of 2026</a>
         </div>
 
-        <!-- Card 3 -->
-        <div class="card-hover bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-          <div class="flex items-start justify-between gap-2 mb-2">
-            <span class="tag-pill bg-teal-50 text-teal-700 text-xs font-semibold px-2.5 py-1 rounded-full">多运动传感 · 通用平台</span>
-            <span class="text-xs text-gray-400 flex-shrink-0">2026</span>
-          </div>
-          <h3 class="font-semibold text-gray-800 text-sm leading-snug mb-2">Output Sports单传感器系统：覆盖足球、游泳、高尔夫的多项目数据平台</h3>
-          <div class="space-y-1.5 mb-3">
-            <div class="flex gap-2">
-              <div class="finding-dot" style="background:#0d9488;"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">Output Sports（爱尔兰，Pre-A轮）突破"一项运动一套设备"的壁垒，单一可穿戴传感器可适配多种运动项目的数据捕获与分析，大幅降低多项目运动员数据监测的硬件成本。</p>
-            </div>
-            <div class="flex gap-2">
-              <div class="finding-dot" style="background:#0d9488;"></div>
-              <p class="text-xs text-gray-600 leading-relaxed">SportsPro将其列为2026年重点投资标的，代表穿戴科技向"通用平台"演进的趋势；结合AI数据分析（SportAI等），端到端训练监测闭环正逐步成型。</p>
+        <div class="card-hover bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+          <div class="flex items-start gap-2">
+            <span class="section-dot bg-sky-400 mt-1"></span>
+            <div class="flex-1">
+              <h3 class="font-semibold text-gray-800 text-sm leading-snug">HRV监测全景图谱2026：从理论到临床应用的系统性综述</h3>
+              <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">
+                《Frontiers in Sports and Active Living》2026.01 发布 HRV 在运动科学应用的全景综述，系统梳理了不同可穿戴设备（胸带、腕带、耳夹式传感器）的测量精度对比、HRV 指标解读标准化方案，以及从监测数据到训练决策的转化路径，为教练和医疗团队提供了可落地的操作指南。
+              </p>
+              <div class="mt-2 flex flex-wrap gap-2 items-center">
+                <span class="tag-pill bg-sky-50 text-sky-500">HRV综述</span>
+                <span class="tag-pill bg-gray-100 text-gray-500">Frontiers 2026.01</span>
+                <a href="https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2025.1714962/full" target="_blank" class="text-sky-500 text-xs underline source-link ml-auto">查看来源 →</a>
+              </div>
             </div>
           </div>
-          <a href="https://www.sportspro.com/features/technology/sports-technology-investment-ideas-2026-list-startups/" target="_blank" class="source-link">📖 查看详情 → SportsPro Sports Tech Class of 2026</a>
         </div>
 
       </div>
@@ -494,16 +439,23 @@
         <div class="flex items-center gap-2 mb-3">
           <span class="text-base">📅</span>
           <h4 class="text-xs font-semibold text-gray-600">历史回顾</h4>
-          <span class="ml-auto text-xs text-gray-400">共5天</span>
+          <span class="ml-auto text-xs text-gray-400">共6天</span>
         </div>
         <div class="grid grid-cols-2 gap-1 max-h-64 overflow-y-auto">
           
-          <a href="sports-daily-2026-04-06.html" class="flex items-center justify-between px-3 py-2 rounded-xl hover:bg-gray-50 transition bg-blue-50 border border-blue-200">
+          <a href="sports-daily-2026-04-07.html" class="flex items-center justify-between px-3 py-2 rounded-xl hover:bg-gray-50 transition bg-blue-50 border border-blue-200">
+            <div class="flex items-center gap-2">
+              <span class="text-sm font-medium text-gray-700">4月7日</span>
+              <span class="text-xs text-gray-400">周二</span>
+            </div>
+            <span class="bg-red-100 text-red-600 text-[10px] px-1.5 py-0.5 rounded-full">今天</span>
+          </a>
+          <a href="sports-daily-2026-04-06.html" class="flex items-center justify-between px-3 py-2 rounded-xl hover:bg-gray-50 transition ">
             <div class="flex items-center gap-2">
               <span class="text-sm font-medium text-gray-700">4月6日</span>
               <span class="text-xs text-gray-400">周一</span>
             </div>
-            <span class="bg-red-100 text-red-600 text-[10px] px-1.5 py-0.5 rounded-full">今天</span>
+            
           </a>
           <a href="sports-daily-2026-04-05.html" class="flex items-center justify-between px-3 py-2 rounded-xl hover:bg-gray-50 transition ">
             <div class="flex items-center gap-2">
@@ -538,14 +490,12 @@
     </section>
 
     <!-- Footer -->
-  <footer class="bg-white border-t border-gray-100 mt-8">
-    <div class="max-w-2xl mx-auto px-4 py-6 text-center">
-      <p class="text-xs text-gray-400 mb-1">运动科学每日内参 · 自动生成于 2026年4月6日</p>
-      <p class="text-xs text-gray-300">内容来源于公开学术期刊与行业报告 · 仅供参考</p>
+  <footer class="bg-white border-t border-gray-100 mt-4">
+    <div class="max-w-2xl mx-auto px-4 py-5 text-center">
+      <p class="text-xs text-gray-400">运动科学每日内参 · AI自动生成</p>
+      <p class="text-xs text-gray-300 mt-1">内容来源于学术数据库、行业报告及权威媒体，仅供参考</p>
       <div class="mt-3 flex justify-center gap-4">
-        <a href="#performance" class="text-xs text-blue-400 hover:text-blue-600">返回顶部</a>
-        <span class="text-gray-200">·</span>
-        <a href="https://Maijie-Zheng.github.io/sports-daily/" target="_blank" class="text-xs text-blue-400 hover:text-blue-600">历史内参</a>
+        <a href="https://maijie-zheng.github.io/sports-daily/" class="text-xs text-gray-400 hover:text-gray-600 transition-colors">📚 历史存档</a>
       </div>
     </div>
   </footer>
